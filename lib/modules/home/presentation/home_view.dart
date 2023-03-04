@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/statistics_view.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -15,12 +16,7 @@ class HomeView extends StatelessWidget {
       body: Container(
         padding: const EdgeInsets.all(16),
         child: Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [Text('Hom nay'), Text('Xem thong ke')],
-            )
-          ],
+          children: const [StatisticsView()],
         ),
       ),
     );
