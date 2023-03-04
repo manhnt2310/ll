@@ -51,8 +51,8 @@ class StatisticsView extends StatelessWidget {
                     child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: const [
-                          Text('So gio hoc'),
-                          Text('1 gio 10 phut'),
+                          Text('So luong'),
+                          Text('90 tu'),
                         ]),
                   ),
                 )
