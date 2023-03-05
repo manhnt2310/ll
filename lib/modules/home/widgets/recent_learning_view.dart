@@ -13,10 +13,13 @@ class RecentLearningView extends StatelessWidget {
           height: 16,
         ),
         Container(
-          padding: const EdgeInsets.all(20),
-          height: 300,
+          decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(6),
+              boxShadow: kElevationToShadow[2]),
+          padding: const EdgeInsets.all(10),
+          height: 250,
           width: double.infinity,
-          color: Colors.white,
           child: Column(
             children: [
               Row(
@@ -29,7 +32,10 @@ class RecentLearningView extends StatelessWidget {
                   Column(
                     children: [
                       Row(
-                        children: [const Text('N1sdfgs3000')],
+                        children: const [Text('N1sdfgs3000')],
+                      ),
+                      const SizedBox(
+                        height: 10,
                       ),
                       Row(
                         children: [
@@ -38,10 +44,12 @@ class RecentLearningView extends StatelessWidget {
                               height: 20,
                               width: 20,
                               color: Colors.blue,
-                              child: Center(
-                                child: const Text('N1'),
+                              child: const Center(
+                                child: Text('N1'),
                               )),
-                          const Text('     '),
+                          const SizedBox(
+                            width: 20,
+                          ),
                           const Text('3000 words')
                         ],
                       )
@@ -51,7 +59,7 @@ class RecentLearningView extends StatelessWidget {
               ),
               Row(
                 children: [
-                  const IconButton(onPressed: null, icon: Icon(Icons.add)),
+                  const IconButton(onPressed: null, icon: Icon(Icons.check)),
                   Expanded(
                     child: Container(
                       color: Colors.white,
@@ -66,9 +74,18 @@ class RecentLearningView extends StatelessWidget {
                   ),
                 ],
               ),
+              const SizedBox(
+                height: 0,
+              ),
               Row(
                 children: [
-                  const IconButton(onPressed: null, icon: Icon(Icons.add)),
+                  const IconButton(
+                    onPressed: null,
+                    icon: Icon(
+                      Icons.check,
+                      color: Colors.red,
+                    ),
+                  ),
                   Expanded(
                     child: Container(
                       color: Colors.white,
@@ -83,9 +100,18 @@ class RecentLearningView extends StatelessWidget {
                   ),
                 ],
               ),
+              const SizedBox(
+                height: 0,
+              ),
               Row(
                 children: [
-                  const IconButton(onPressed: null, icon: Icon(Icons.add)),
+                  const IconButton(
+                    onPressed: null,
+                    icon: Icon(
+                      Icons.check,
+                      color: Colors.green,
+                    ),
+                  ),
                   Expanded(
                     child: Container(
                       color: Colors.white,
