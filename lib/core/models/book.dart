@@ -8,7 +8,7 @@ class Book {
     required this.totalWords,
   });
 
-  final int id;
+  final String id;
   final String title;
   final String description;
   final String cover;
