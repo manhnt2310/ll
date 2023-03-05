@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class JapaneseView extends StatelessWidget {
-  const JapaneseView({super.key});
+class BookView extends StatelessWidget {
+  const BookView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -41,9 +41,11 @@ class JapaneseView extends StatelessWidget {
                         children: [
                           const Text('       '),
                           Container(
+                              decoration: BoxDecoration(
+                                  color: Colors.blue,
+                                  borderRadius: BorderRadius.circular(10)),
                               height: 20,
-                              width: 20,
-                              color: Colors.blue,
+                              width: 25,
                               child: const Center(
                                 child: Text('N1'),
                               )),
@@ -92,9 +94,11 @@ class JapaneseView extends StatelessWidget {
                         children: [
                           const Text('       '),
                           Container(
+                              decoration: BoxDecoration(
+                                  color: Colors.red,
+                                  borderRadius: BorderRadius.circular(10)),
                               height: 20,
-                              width: 20,
-                              color: Colors.red,
+                              width: 25,
                               child: const Center(
                                 child: Text('N2'),
                               )),

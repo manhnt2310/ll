@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import '../widgets/statistics_view.dart';
 import '../widgets/recent_learning_view.dart';
+import '../widgets/review_view.dart';
+import '../widgets/book_view.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -16,17 +19,24 @@ class HomeView extends StatelessWidget {
       ),
       body: Container(
         padding: const EdgeInsets.all(16),
-        child: Column(
-          children: const [
-            StatisticsView(),
-            SizedBox(
-              height: 16,
-            ),
-            SizedBox(
-              height: 16,
-            ),
-            RecentLearningView()
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: const [
+              StatisticsView(),
+              SizedBox(
+                height: 20,
+              ),
+              RecentLearningView(),
+              SizedBox(
+                height: 20,
+              ),
+              ReviewView(),
+              SizedBox(
+                height: 20,
+              ),
+              BookView(),
+            ],
+          ),
         ),
       ),
     );

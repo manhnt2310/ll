@@ -38,28 +38,42 @@ class ReviewView extends StatelessWidget {
               height: 70,
               width: 50,
             ),
-            const SizedBox(
-              width: 10,
-            ),
-            Column(
-              children: [
-                Row(
-                  children: const [
-                    Text('asfhuiafbuia'),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  children: [
+                    Row(
+                      children: const [
+                        Text('asfhuiafbuia'),
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 8,
+                    ),
+                    Expanded(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: const [
+                              Icon(
+                                Icons.check,
+                                color: Colors.green,
+                              ),
+                              SizedBox(
+                                width: 6,
+                              ),
+                              Text('Can on tap'),
+                            ],
+                          ),
+                          const Text('20 words'),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
-                Row(
-                  children: const [
-                    IconButton(
-                        onPressed: null,
-                        icon: Icon(
-                          Icons.check,
-                          color: Colors.green,
-                        )),
-                    Text('Can on tap'),
-                  ],
-                ),
-              ],
+              ),
             )
           ]),
         ),
@@ -81,28 +95,42 @@ class ReviewView extends StatelessWidget {
               height: 70,
               width: 50,
             ),
-            const SizedBox(
-              width: 10,
-            ),
-            Column(
-              children: [
-                Row(
-                  children: const [
-                    Text('asfhuiafbuia-asfwe'),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  children: [
+                    Row(
+                      children: const [
+                        Text('asfhuiafbuia-wefsw'),
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 8,
+                    ),
+                    Expanded(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: const [
+                              Icon(
+                                Icons.check,
+                                color: Colors.green,
+                              ),
+                              SizedBox(
+                                width: 6,
+                              ),
+                              Text('Can on tap'),
+                            ],
+                          ),
+                          const Text('20 words'),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
-                Row(
-                  children: const [
-                    IconButton(
-                        onPressed: null,
-                        icon: Icon(
-                          Icons.check,
-                          color: Colors.green,
-                        )),
-                    Text('Can on tap')
-                  ],
-                ),
-              ],
+              ),
             )
           ]),
         ),

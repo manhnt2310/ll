@@ -41,9 +41,11 @@ class RecentLearningView extends StatelessWidget {
                         children: [
                           const Text('       '),
                           Container(
+                              decoration: BoxDecoration(
+                                  color: Colors.blue,
+                                  borderRadius: BorderRadius.circular(10)),
                               height: 20,
-                              width: 20,
-                              color: Colors.blue,
+                              width: 25,
                               child: const Center(
                                 child: Text('N1'),
                               )),
