@@ -1,0 +1,34 @@
+import 'package:flutter/material.dart';
+
+class TopMenuView extends StatelessWidget {
+  const TopMenuView({super.key, required this.totalItems});
+
+  final int totalItems;
+
+  @override
+  Widget build(BuildContext context) {
+    final items = List<Widget>.generate(
+        totalItems,
+        (index) => Container(
+            decoration: BoxDecoration(
+                color: const Color.fromARGB(255, 241, 238, 238),
+                borderRadius: BorderRadius.circular(25)),
+            width: 50,
+            height: 50,
+            alignment: Alignment.center,
+            child: Text(
+              index.toString(),
+              style: const TextStyle(fontSize: 20.0),
+            )));
+
+    return SizedBox(
+      height: 50,
+      child: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Wrap(
+            spacing: 8,
+            children: items,
+          )),
+    );
+  }
+}
