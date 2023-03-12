@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ll/core/models/book.dart';
 import 'package:ll/modules/book_detail/widgets/chapter_view.dart';
+import 'package:ll/modules/book_detail/widgets/start_learning_button.dart';
 import 'package:ll/modules/book_detail/widgets/title_view.dart';
 import 'package:ll/modules/book_detail/widgets/top_menu_view.dart';
 import 'package:ll/modules/book_detail/widgets/statistics_view.dart';
@@ -40,7 +41,11 @@ class BookDetailView extends StatelessWidget {
                 const SizedBox(
                   height: 5,
                 ),
-                const StatisticsView()
+                const StatisticsView(),
+                const SizedBox(
+                  height: 20,
+                ),
+                const StartLearningButton(),
               ],
             ),
           ),

@@ -84,7 +84,10 @@ class ItemView extends StatelessWidget {
                 Text(title),
               ],
             ),
-            TextButton(onPressed: null, child: Text(subtitle))
+            TextButton(
+              onPressed: null,
+              child: Text(subtitle),
+            )
           ],
         ));
   }
