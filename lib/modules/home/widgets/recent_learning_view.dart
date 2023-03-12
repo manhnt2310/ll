@@ -18,7 +18,7 @@ class RecentLearningView extends StatelessWidget {
               borderRadius: BorderRadius.circular(6),
               boxShadow: kElevationToShadow[2]),
           padding: const EdgeInsets.all(10),
-          height: 270,
+          height: 220,
           width: double.infinity,
           child: Column(
             children: [
@@ -61,7 +61,10 @@ class RecentLearningView extends StatelessWidget {
               ),
               Row(
                 children: [
-                  const IconButton(onPressed: null, icon: Icon(Icons.check)),
+                  const Icon(
+                    Icons.check,
+                    color: Colors.grey,
+                  ),
                   Expanded(
                     child: Container(
                       color: Colors.white,
@@ -81,12 +84,9 @@ class RecentLearningView extends StatelessWidget {
               ),
               Row(
                 children: [
-                  const IconButton(
-                    onPressed: null,
-                    icon: Icon(
-                      Icons.check,
-                      color: Colors.red,
-                    ),
+                  const Icon(
+                    Icons.check,
+                    color: Colors.red,
                   ),
                   Expanded(
                     child: Container(
@@ -107,12 +107,9 @@ class RecentLearningView extends StatelessWidget {
               ),
               Row(
                 children: [
-                  const IconButton(
-                    onPressed: null,
-                    icon: Icon(
-                      Icons.check,
-                      color: Colors.green,
-                    ),
+                  const Icon(
+                    Icons.check,
+                    color: Colors.green,
                   ),
                   Expanded(
                     child: Container(

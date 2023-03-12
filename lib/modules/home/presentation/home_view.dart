@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ll/core/data_providers/book_data_provider.dart';
+import 'package:ll/modules/book_detail/presentation/book_detail_view.dart';
 import 'package:ll/modules/home/widgets/book_grid_view.dart';
 import '../widgets/statistics_view.dart';
 import '../widgets/recent_learning_view.dart';
@@ -29,11 +30,15 @@ class HomeView extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              const RecentLearningView(),
+              GestureDetector(
+                  onTap: () => _goToBookDetailView(context),
+                  child: const RecentLearningView()),
               const SizedBox(
                 height: 20,
               ),
-              const ReviewView(),
+              ReviewView(
+                books: books,
+              ),
               const SizedBox(
                 height: 20,
               ),
@@ -42,6 +47,13 @@ class HomeView extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+
+  _goToBookDetailView(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const BookDetailView()),
     );
   }
 }
