@@ -26,7 +26,9 @@ class BookDetailView extends StatelessWidget {
                 SizedBox(
                   height: 16,
                 ),
-                TopMenuView(totalItems: 20)
+                TopMenuView(
+                  totalItems: 10,
+                )
               ],
             ),
           ),

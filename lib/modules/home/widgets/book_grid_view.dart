@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:ll/common/type_definition.dart';
 import 'package:ll/core/models/book.dart';
 
 class BookGridView extends StatelessWidget {
-  const BookGridView({super.key, required this.books});
+  const BookGridView({
+    super.key,
+    required this.books,
+    required this.onSelectBook,
+  });
 
   final List<Book> books;
+  final OnSelectBook onSelectBook;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +28,10 @@ class BookGridView extends StatelessWidget {
                   crossAxisSpacing: 8,
                   childAspectRatio: 0.5),
               itemBuilder: (context, index) {
-                return BookView(book: books[index]);
+                return BookView(
+                  book: books[index],
+                  onSelectBook: onSelectBook,
+                );
               },
               itemCount: books.length,
             )),
@@ -32,58 +41,66 @@ class BookGridView extends StatelessWidget {
 }
 
 class BookView extends StatelessWidget {
-  const BookView({super.key, required this.book});
+  const BookView({
+    Key? key,
+    required this.book,
+    required this.onSelectBook,
+  }) : super(key: key);
 
   final Book book;
+  final OnSelectBook onSelectBook;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(6),
-            boxShadow: kElevationToShadow[2]),
-        padding: const EdgeInsets.all(10),
-        child: Column(
-          children: [
-            Row(
-              children: [
-                Container(
-                  height: 70,
-                  width: 50,
-                  color: Colors.blue,
-                ),
-                Column(
-                  children: [
-                    Row(
-                      children: [Text(book.title)],
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    Row(
-                      children: [
-                        const Text('        '),
-                        Container(
-                            decoration: BoxDecoration(
-                                color: Colors.blue,
-                                borderRadius: BorderRadius.circular(10)),
-                            height: 20,
-                            width: 25,
-                            child: Center(
-                              child: Text(book.level),
-                            )),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Text('${book.totalWords} tu')
-                      ],
-                    )
-                  ],
-                )
-              ],
-            ),
-          ],
-        ));
+    return GestureDetector(
+      onTap: () => onSelectBook(book),
+      child: Container(
+          decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(6),
+              boxShadow: kElevationToShadow[2]),
+          padding: const EdgeInsets.all(10),
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  Container(
+                    height: 70,
+                    width: 50,
+                    color: Colors.blue,
+                  ),
+                  Column(
+                    children: [
+                      Row(
+                        children: [Text(book.title)],
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      Row(
+                        children: [
+                          const Text('        '),
+                          Container(
+                              decoration: BoxDecoration(
+                                  color: Colors.blue,
+                                  borderRadius: BorderRadius.circular(10)),
+                              height: 20,
+                              width: 25,
+                              child: Center(
+                                child: Text(book.level),
+                              )),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Text('${book.totalWords} tu')
+                        ],
+                      )
+                    ],
+                  )
+                ],
+              ),
+            ],
+          )),
+    );
   }
 }

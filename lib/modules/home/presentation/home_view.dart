@@ -45,7 +45,10 @@ class HomeView extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              BookGridView(books: books)
+              BookGridView(
+                books: books,
+                onSelectBook: (book) => _goToBookDetailView(context, book),
+              )
             ],
           ),
         ),
