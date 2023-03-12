@@ -40,6 +40,7 @@ class HomeView extends StatelessWidget {
               ),
               ReviewView(
                 books: books,
+                onSelectBook: (book) => _goToBookDetailView(context, book),
               ),
               const SizedBox(
                 height: 20,
