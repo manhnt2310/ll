@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ll/core/data_providers/book_data_provider.dart';
+import 'package:ll/core/models/book.dart';
 import 'package:ll/modules/book_detail/presentation/book_detail_view.dart';
 import 'package:ll/modules/home/widgets/book_grid_view.dart';
 import '../widgets/statistics_view.dart';
@@ -32,6 +33,7 @@ class HomeView extends StatelessWidget {
               ),
               RecentLearningView(
                 book: books[0],
+                onSelectBook: (book) => _goToBookDetailView(context, book),
               ),
               const SizedBox(
                 height: 20,
@@ -50,10 +52,14 @@ class HomeView extends StatelessWidget {
     );
   }
 
-  _goToBookDetailView(BuildContext context) {
+  _goToBookDetailView(BuildContext context, Book book) {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => const BookDetailView()),
+      MaterialPageRoute(
+        builder: (context) => BookDetailView(
+          book: book,
+        ),
+      ),
     );
   }
 }

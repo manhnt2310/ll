@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:ll/core/models/book.dart';
 import 'package:ll/modules/book_detail/widgets/title_view.dart';
 import 'package:ll/modules/book_detail/widgets/top_menu_view.dart';
 
 class BookDetailView extends StatelessWidget {
-  const BookDetailView({super.key});
+  const BookDetailView({super.key, required this.book});
+
+  final Book book;
 
   @override
   Widget build(BuildContext context) {
