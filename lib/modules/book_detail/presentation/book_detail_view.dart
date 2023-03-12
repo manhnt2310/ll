@@ -6,49 +6,66 @@ import 'package:ll/modules/book_detail/widgets/title_view.dart';
 import 'package:ll/modules/book_detail/widgets/top_menu_view.dart';
 import 'package:ll/modules/book_detail/widgets/statistics_view.dart';
 
-class BookDetailView extends StatelessWidget {
+class BookDetailView extends StatefulWidget {
   const BookDetailView({super.key, required this.book});
 
   final Book book;
 
   @override
+  State<BookDetailView> createState() => _BookDetailViewState();
+}
+
+class _BookDetailViewState extends State<BookDetailView> {
+  int _selectedChapterIndex = 0;
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('Book Detail'),
-          backgroundColor: Colors.white,
-          foregroundColor: Colors.black,
-          elevation: 0.5,
-        ),
-        body: Container(
-          padding: const EdgeInsets.all(16),
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                const TitleView(),
-                const SizedBox(
-                  height: 16,
-                ),
-                const TopMenuView(
-                  totalItems: 10,
-                ),
-                const SizedBox(
-                  height: 15,
-                ),
-                ChapterView(
-                  chapter: book.chapters[0],
-                ),
-                const SizedBox(
-                  height: 5,
-                ),
-                const StatisticsView(),
-                const SizedBox(
-                  height: 20,
-                ),
-                const StartLearningButton(),
-              ],
-            ),
+      appBar: AppBar(
+        title: const Text('Book Detail'),
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.black,
+        elevation: 0.5,
+      ),
+      body: Container(
+        padding: const EdgeInsets.all(16),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              const TitleView(),
+              const SizedBox(
+                height: 16,
+              ),
+              TopMenuView(
+                totalItems: widget.book.chapters.length,
+                onSelectItemAtIndex: _onTopMenuSelectItemAtIndex,
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              ChapterView(
+                chapter: widget.book.chapters[_selectedChapterIndex],
+              ),
+              const SizedBox(
+                height: 5,
+              ),
+              const StatisticsView(),
+              const SizedBox(
+                height: 20,
+              ),
+              const StartLearningButton(),
+            ],
           ),
-        ));
+        ),
+      ),
+    );
+  }
+
+  _onTopMenuSelectItemAtIndex(int index) {
+    debugPrint(index.toString());
+
+    setState(() {
+      _selectedChapterIndex = index;
+    });
   }
 }

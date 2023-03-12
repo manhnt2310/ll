@@ -39,6 +39,76 @@ class BookDataProvider {
                 )
               ],
             ),
+            Chapter(
+              id: 3,
+              title: 'Chapter 3',
+              description: 'Cong viec',
+              totalWords: 100,
+              sections: [
+                Section(
+                  id: 1,
+                  title: 'Section 1',
+                  description: 'IT',
+                  totalWords: 50,
+                )
+              ],
+            ),
+            Chapter(
+              id: 4,
+              title: 'Chapter 4',
+              description: 'Cong viec',
+              totalWords: 100,
+              sections: [
+                Section(
+                  id: 1,
+                  title: 'Section 1',
+                  description: 'IT',
+                  totalWords: 50,
+                )
+              ],
+            ),
+            Chapter(
+              id: 5,
+              title: 'Chapter 5',
+              description: 'Cong viec',
+              totalWords: 100,
+              sections: [
+                Section(
+                  id: 1,
+                  title: 'Section 1',
+                  description: 'IT',
+                  totalWords: 50,
+                )
+              ],
+            ),
+            Chapter(
+              id: 6,
+              title: 'Chapter 6',
+              description: 'Cong viec',
+              totalWords: 100,
+              sections: [
+                Section(
+                  id: 1,
+                  title: 'Section 1',
+                  description: 'IT',
+                  totalWords: 50,
+                )
+              ],
+            ),
+            Chapter(
+              id: 7,
+              title: 'Chapter 7',
+              description: 'Cong viec',
+              totalWords: 100,
+              sections: [
+                Section(
+                  id: 1,
+                  title: 'Section 1',
+                  description: 'IT',
+                  totalWords: 50,
+                )
+              ],
+            ),
           ]),
       const Book(
         id: '2',
