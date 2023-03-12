@@ -30,9 +30,9 @@ class HomeView extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              GestureDetector(
-                  onTap: () => _goToBookDetailView(context),
-                  child: const RecentLearningView()),
+              RecentLearningView(
+                book: books[0],
+              ),
               const SizedBox(
                 height: 20,
               ),

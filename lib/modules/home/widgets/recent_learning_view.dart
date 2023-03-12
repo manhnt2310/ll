@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:ll/core/models/book.dart';
 
 class RecentLearningView extends StatelessWidget {
-  const RecentLearningView({super.key});
+  const RecentLearningView({super.key, required this.book});
+
+  final Book book;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +21,7 @@ class RecentLearningView extends StatelessWidget {
               borderRadius: BorderRadius.circular(6),
               boxShadow: kElevationToShadow[2]),
           padding: const EdgeInsets.all(10),
-          height: 220,
+          height: 230,
           width: double.infinity,
           child: Column(
             children: [
@@ -29,17 +32,18 @@ class RecentLearningView extends StatelessWidget {
                     width: 70,
                     color: Colors.blue,
                   ),
+                  const SizedBox(
+                    width: 16,
+                  ),
                   Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Row(
-                        children: const [Text('N1sdfgs3000')],
-                      ),
+                      Text(book.title),
                       const SizedBox(
                         height: 10,
                       ),
                       Row(
                         children: [
-                          const Text('       '),
                           Container(
                               decoration: BoxDecoration(
                                   color: Colors.blue,
@@ -50,7 +54,7 @@ class RecentLearningView extends StatelessWidget {
                                 child: Text('N1'),
                               )),
                           const SizedBox(
-                            width: 20,
+                            width: 8,
                           ),
                           const Text('3000 words')
                         ],
@@ -58,6 +62,9 @@ class RecentLearningView extends StatelessWidget {
                     ],
                   )
                 ],
+              ),
+              const SizedBox(
+                height: 10,
               ),
               Row(
                 children: [
