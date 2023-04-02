@@ -15,23 +15,13 @@ class TopMenuView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final items = List<Widget>.generate(
-      totalItems,
-      (index) => Container(
-        decoration: BoxDecoration(
-          color: const Color.fromARGB(255, 241, 238, 238),
-          borderRadius: BorderRadius.circular(25),
-        ),
-        width: 50,
-        height: 50,
-        alignment: Alignment.center,
-        child: TextButton(
-          onPressed: () => onSelectItemAtIndex(index),
-          child: Text(
-            '${index + 1}',
-            style: const TextStyle(fontSize: 20.0),
-          ),
-        ),
-      ),
+      totalItems + 1,
+      (index) {
+        return TopMenuButton(
+          index: index,
+          onSelectItemAtIndex: onSelectItemAtIndex,
+        );
+      },
     );
 
     return SizedBox(
@@ -42,6 +32,37 @@ class TopMenuView extends StatelessWidget {
         child: Wrap(
           spacing: 8,
           children: items,
+        ),
+      ),
+    );
+  }
+}
+
+class TopMenuButton extends StatelessWidget {
+  const TopMenuButton({
+    Key? key,
+    required this.index,
+    required this.onSelectItemAtIndex,
+  }) : super(key: key);
+
+  final int index;
+  final OnSelectItemAtIndex onSelectItemAtIndex;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        color: const Color.fromARGB(255, 241, 238, 238),
+        borderRadius: BorderRadius.circular(25),
+      ),
+      width: 50,
+      height: 50,
+      alignment: Alignment.center,
+      child: TextButton(
+        onPressed: () => onSelectItemAtIndex(index),
+        child: Text(
+          index == 0 ? "All" : '$index',
+          style: const TextStyle(fontSize: 20.0),
         ),
       ),
     );

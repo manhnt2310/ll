@@ -43,9 +43,10 @@ class _BookDetailViewState extends State<BookDetailView> {
               const SizedBox(
                 height: 15,
               ),
-              ChapterView(
-                chapter: widget.book.chapters[_selectedChapterIndex],
-              ),
+              if (_selectedChapterIndex > 0)
+                ChapterView(
+                  chapter: widget.book.chapters[_selectedChapterIndex - 1],
+                ),
               const SizedBox(
                 height: 5,
               ),
