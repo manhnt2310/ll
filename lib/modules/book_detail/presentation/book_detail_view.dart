@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ll/core/models/book.dart';
 import 'package:ll/modules/book_detail/widgets/chapter_view.dart';
+import 'package:ll/modules/book_detail/widgets/section_list_view.dart';
 import 'package:ll/modules/book_detail/widgets/start_learning_button.dart';
 import 'package:ll/modules/book_detail/widgets/title_view.dart';
 import 'package:ll/modules/book_detail/widgets/top_menu_view.dart';
@@ -46,6 +47,7 @@ class _BookDetailViewState extends State<BookDetailView> {
               if (_selectedChapterIndex > 0)
                 ChapterView(
                   chapter: widget.book.chapters[_selectedChapterIndex - 1],
+                  onSelectSection: _onChapterViewSelectSection,
                 ),
               const SizedBox(
                 height: 5,
@@ -62,11 +64,18 @@ class _BookDetailViewState extends State<BookDetailView> {
     );
   }
 
-  _onTopMenuSelectItemAtIndex(int index) {
+  void _onTopMenuSelectItemAtIndex(int index) {
     debugPrint(index.toString());
 
     setState(() {
       _selectedChapterIndex = index;
     });
+  }
+
+  void _onChapterViewSelectSection() {
+    showDialog(
+      context: context,
+      builder: (context) => SectionListView(),
+    );
   }
 }
