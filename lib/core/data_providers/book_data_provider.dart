@@ -22,7 +22,25 @@ class BookDataProvider {
                   title: 'Section 1',
                   description: 'Gia dinh',
                   totalWords: 50,
-                )
+                ),
+                Section(
+                  id: 2,
+                  title: 'Section 2',
+                  description: 'Gia dinh',
+                  totalWords: 60,
+                ),
+                Section(
+                  id: 3,
+                  title: 'Section 3',
+                  description: 'Gia dinh',
+                  totalWords: 70,
+                ),
+                Section(
+                  id: 4,
+                  title: 'Section 4',
+                  description: 'Gia dinh',
+                  totalWords: 80,
+                ),
               ],
             ),
             Chapter(

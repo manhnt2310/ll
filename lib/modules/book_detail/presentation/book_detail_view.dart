@@ -75,7 +75,9 @@ class _BookDetailViewState extends State<BookDetailView> {
   void _onChapterViewSelectSection() {
     showDialog(
       context: context,
-      builder: (context) => SectionListView(),
+      builder: (context) => SectionListView(
+        chapter: widget.book.chapters[_selectedChapterIndex - 1],
+      ),
     );
   }
 }
