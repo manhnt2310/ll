@@ -42,7 +42,7 @@ class BookDataProvider {
             Chapter(
               id: 3,
               title: 'Chapter 3',
-              description: 'Cong viec',
+              description: 'Hoc tap',
               totalWords: 100,
               sections: [
                 Section(
@@ -56,7 +56,7 @@ class BookDataProvider {
             Chapter(
               id: 4,
               title: 'Chapter 4',
-              description: 'Cong viec',
+              description: 'The thao',
               totalWords: 100,
               sections: [
                 Section(
@@ -70,7 +70,7 @@ class BookDataProvider {
             Chapter(
               id: 5,
               title: 'Chapter 5',
-              description: 'Cong viec',
+              description: 'Xe co',
               totalWords: 100,
               sections: [
                 Section(
@@ -84,7 +84,7 @@ class BookDataProvider {
             Chapter(
               id: 6,
               title: 'Chapter 6',
-              description: 'Cong viec',
+              description: 'Nha cua',
               totalWords: 100,
               sections: [
                 Section(
@@ -98,7 +98,7 @@ class BookDataProvider {
             Chapter(
               id: 7,
               title: 'Chapter 7',
-              description: 'Cong viec',
+              description: 'Giai tri',
               totalWords: 100,
               sections: [
                 Section(
