@@ -33,7 +33,10 @@ class _BookDetailViewState extends State<BookDetailView> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              const TitleView(),
+              TitleView(
+                cover: widget.book.cover,
+                title: widget.book.title,
+              ),
               const SizedBox(
                 height: 16,
               ),

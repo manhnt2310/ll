@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:ll/common/type_definition.dart';
 import 'package:ll/core/models/book.dart';
@@ -74,8 +75,14 @@ class BookView extends StatelessWidget {
                 color: Colors.green,
                 borderRadius: BorderRadius.circular(3),
                 boxShadow: kElevationToShadow[2]),
-            height: 70,
-            width: 50,
+            child: CachedNetworkImage(
+              height: 70,
+              width: 50,
+              imageUrl: book.cover,
+              placeholder: (context, url) =>
+                  const Center(child: CircularProgressIndicator()),
+              errorWidget: (context, url, error) => const Icon(Icons.error),
+            ),
           ),
           Expanded(
             child: Padding(
