@@ -25,7 +25,7 @@ class Book {
       cover: json['cover'],
       level: json['level'],
       totalWords: json['totalWords'],
-      chapters: [],
+      chapters: Chapter.listFromJsons(json['chapters']),
     );
   }
 
@@ -52,6 +52,24 @@ class Chapter {
   final String description;
   final int totalWords;
   final List<Section> sections;
+
+  factory Chapter.fromJson(Map<String, dynamic> json) {
+    return Chapter(
+      id: json['id'],
+      title: json['title'],
+      description: json['description'],
+      totalWords: json['totalWords'],
+      sections: Section.listFromJsons(json['sections']),
+    );
+  }
+
+  static List<Chapter> listFromJsons(List<dynamic> jsons) {
+    return jsons
+        .map(
+          (json) => Chapter.fromJson(json),
+        )
+        .toList();
+  }
 }
 
 class Section {
@@ -66,4 +84,21 @@ class Section {
   final String title;
   final String description;
   final int totalWords;
+
+  factory Section.fromJson(Map<String, dynamic> json) {
+    return Section(
+      id: json['id'],
+      title: json['title'],
+      description: json['description'],
+      totalWords: json['totalWords'],
+    );
+  }
+
+  static List<Section> listFromJsons(List<dynamic> jsons) {
+    return jsons
+        .map(
+          (json) => Section.fromJson(json),
+        )
+        .toList();
+  }
 }
