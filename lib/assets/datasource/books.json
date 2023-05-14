@@ -3,7 +3,7 @@
           "id": "1",
           "title": "N1 3000",
           "description": "3000 words",
-          "cover": "cover",
+          "cover": "https://m.media-amazon.com/images/I/51cVbMzlxgL._SX343_BO1,204,203,200_.jpg",
           "level": "N1",
           "totalWords": 3000,
           "chapters": [
@@ -153,7 +153,7 @@
         "id": "2",
         "title": "N2 3000",
         "description": "3000 words",
-        "cover": "cover",
+        "cover": "https://m.media-amazon.com/images/I/51gipvIabnL._SX352_BO1,204,203,200_.jpg",
         "level": "N2",
         "totalWords": 3000,
         "chapters": [

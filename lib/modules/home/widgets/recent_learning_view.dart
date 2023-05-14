@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:ll/common/type_definition.dart';
 import 'package:ll/core/models/book.dart';
@@ -35,10 +36,14 @@ class RecentLearningView extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Container(
-                      height: 100,
+                    CachedNetworkImage(
                       width: 70,
-                      color: Colors.blue,
+                      height: 100,
+                      imageUrl: book.cover,
+                      placeholder: (context, url) =>
+                          const Center(child: CircularProgressIndicator()),
+                      errorWidget: (context, url, error) =>
+                          const Icon(Icons.error),
                     ),
                     const SizedBox(
                       width: 16,
