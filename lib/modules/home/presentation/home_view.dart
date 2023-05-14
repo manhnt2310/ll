@@ -13,46 +13,61 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final bookDataProvider = BookDataProvider();
-    final books = bookDataProvider.getBooks();
 
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Japanese Learning'),
-        backgroundColor: Colors.white,
-        foregroundColor: Colors.black,
-        elevation: 0.5,
-      ),
-      body: Container(
-        padding: const EdgeInsets.all(16),
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              const StatisticsView(),
-              const SizedBox(
-                height: 20,
+    return FutureBuilder(
+      future: bookDataProvider.getBooks(),
+      builder: (BuildContext context, AsyncSnapshot snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return const CircularProgressIndicator();
+        }
+        if (snapshot.hasData) {
+          final books = snapshot.data as List<Book>;
+
+          return Scaffold(
+            appBar: AppBar(
+              title: const Text('Japanese Learning'),
+              backgroundColor: Colors.white,
+              foregroundColor: Colors.black,
+              elevation: 0.5,
+            ),
+            body: Container(
+              padding: const EdgeInsets.all(16),
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    const StatisticsView(),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    RecentLearningView(
+                      book: books[0],
+                      onSelectBook: (book) =>
+                          _goToBookDetailView(context, book),
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    ReviewView(
+                      books: books,
+                      onSelectBook: (book) =>
+                          _goToBookDetailView(context, book),
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    BookGridView(
+                      books: books,
+                      onSelectBook: (book) =>
+                          _goToBookDetailView(context, book),
+                    )
+                  ],
+                ),
               ),
-              RecentLearningView(
-                book: books[0],
-                onSelectBook: (book) => _goToBookDetailView(context, book),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              ReviewView(
-                books: books,
-                onSelectBook: (book) => _goToBookDetailView(context, book),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              BookGridView(
-                books: books,
-                onSelectBook: (book) => _goToBookDetailView(context, book),
-              )
-            ],
-          ),
-        ),
-      ),
+            ),
+          );
+        }
+        return Container();
+      },
     );
   }
 
