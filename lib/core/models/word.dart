@@ -1,3 +1,5 @@
+import 'package:ll/core/models/example.dart';
+
 class Word {
   const Word({
     required this.id,
@@ -6,6 +8,7 @@ class Word {
     required this.sectionId,
     required this.label,
     required this.translatedLabel,
+    required this.examples,
   });
 
   final int id;
@@ -15,6 +18,8 @@ class Word {
   final String label;
   final String translatedLabel;
 
+  final List<Example> examples;
+
   factory Word.fromJson(Map<String, dynamic> json) {
     return Word(
       id: json['id'],
@@ -23,6 +28,7 @@ class Word {
       sectionId: json['sectionId'],
       label: json['label'],
       translatedLabel: json['translatedLabel'],
+      examples: Example.listFromJsons(json['examples']),
     );
   }
 

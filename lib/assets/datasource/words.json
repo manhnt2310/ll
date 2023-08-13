@@ -5,7 +5,15 @@
         "chapterId": 1,
         "sectionId": 1,
         "label": "doctor",
-        "translatedLabel": "bac si"
+        "translatedLabel": "bac si",
+        "examples": [
+            {
+                "label": "what is a doctor?",
+                "translatedLabel": "1 bac si la gi?"
+
+            }
+        ]
+
     },
     {
         "id": 2,
@@ -13,7 +21,14 @@
         "chapterId": 1,
         "sectionId": 1,
         "label": "teacher",
-        "translatedLabel": "giao vien"
+        "translatedLabel": "giao vien",
+        "examples": [
+            {
+                "label": "what is a teacher?",
+                "translatedLabel": "1 giao vien la gi?"
+
+            }
+        ]
     },
     {
         "id": 3,
@@ -21,7 +36,14 @@
         "chapterId": 1,
         "sectionId": 1,
         "label": "engineer",
-        "translatedLabel": "ky su"
+        "translatedLabel": "ky su",
+        "examples": [
+            {
+                "label": "what is a engineer?",
+                "translatedLabel": "1 ky su la gi?"
+
+            }
+        ]
     },
     {
         "id": 4,
@@ -29,6 +51,13 @@
         "chapterId": 1,
         "sectionId": 1,
         "label": "architect",
-        "translatedLabel": "kien truc su"
+        "translatedLabel": "kien truc su",
+        "examples": [
+            {
+                "label": "what is a architect?",
+                "translatedLabel": "1 kien truc su la gi?"
+
+            }
+        ]
     }
 ]

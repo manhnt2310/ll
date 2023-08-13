@@ -6,7 +6,6 @@ import 'package:ll/modules/book_detail/widgets/start_learning_button.dart';
 import 'package:ll/modules/book_detail/widgets/title_view.dart';
 import 'package:ll/modules/book_detail/widgets/top_menu_view.dart';
 import 'package:ll/modules/book_detail/widgets/statistics_view.dart';
-import 'package:ll/modules/word_list/presentation/word_list_view.dart';
 
 class BookDetailView extends StatefulWidget {
   const BookDetailView({

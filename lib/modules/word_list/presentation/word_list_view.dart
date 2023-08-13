@@ -44,7 +44,7 @@ class WordListView extends StatelessWidget {
                     return WordView(word: words[index]);
                   },
                   separatorBuilder: (context, index) => const SizedBox(
-                    height: 10,
+                    height: 15,
                   ),
                 ),
               ),
