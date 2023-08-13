@@ -10,7 +10,10 @@
             {
                 "label": "what is a doctor?",
                 "translatedLabel": "1 bac si la gi?"
-
+            },
+            {
+                "label": "How many doctor?",
+                "translatedLabel": "Co bao nhieu bac si?"
             }
         ]
 
@@ -27,6 +30,10 @@
                 "label": "what is a teacher?",
                 "translatedLabel": "1 giao vien la gi?"
 
+            },
+            {
+                "label": "How many teacher?",
+                "translatedLabel": "Co bao nhieu giao vien?"
             }
         ]
     },
@@ -41,7 +48,10 @@
             {
                 "label": "what is a engineer?",
                 "translatedLabel": "1 ky su la gi?"
-
+            },
+            {
+                "label": "How many engineer?",
+                "translatedLabel": "Co bao nhieu ky su?"
             }
         ]
     },
@@ -56,7 +66,10 @@
             {
                 "label": "what is a architect?",
                 "translatedLabel": "1 kien truc su la gi?"
-
+            },
+            {
+                "label": "How many architect?",
+                "translatedLabel": "Co bao nhieu kien truc su?"
             }
         ]
     }

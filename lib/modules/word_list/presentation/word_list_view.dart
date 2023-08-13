@@ -35,17 +35,15 @@ class WordListView extends StatelessWidget {
             ),
             body: Container(
               padding: const EdgeInsets.all(10),
-              child: SingleChildScrollView(
-                child: ListView.separated(
-                  shrinkWrap: true,
-                  padding: const EdgeInsets.all(15),
-                  itemCount: words.length,
-                  itemBuilder: (context, index) {
-                    return WordView(word: words[index]);
-                  },
-                  separatorBuilder: (context, index) => const SizedBox(
-                    height: 15,
-                  ),
+              child: ListView.separated(
+                shrinkWrap: true,
+                padding: const EdgeInsets.all(15),
+                itemCount: words.length,
+                itemBuilder: (context, index) {
+                  return WordView(word: words[index]);
+                },
+                separatorBuilder: (context, index) => const SizedBox(
+                  height: 15,
                 ),
               ),
             ),

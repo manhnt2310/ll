@@ -66,11 +66,13 @@ class _WordViewState extends State<WordView> {
             duration: const Duration(milliseconds: 200),
             child: GestureDetector(
               onTap: () => toggleVisibility(),
-              child: ExampleView(word: widget.word),
+              child: Column(
+                children: widget.word.examples
+                    .map((example) => ExampleView(example: example))
+                    .toList(),
+              ),
             ),
           ),
-
-        // ExampleView(word: widget.word),
       ],
     );
   }

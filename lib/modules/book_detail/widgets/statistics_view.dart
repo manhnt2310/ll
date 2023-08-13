@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:ll/modules/word_list/presentation/word_list_view.dart';
 
 class StatisticsView extends StatelessWidget {

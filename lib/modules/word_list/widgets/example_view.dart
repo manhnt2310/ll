@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:ll/core/models/word.dart';
+import 'package:ll/core/models/example.dart';
 
 class ExampleView extends StatelessWidget {
   const ExampleView({
     super.key,
-    required this.word,
+    required this.example,
   });
 
-  final Word word;
+  final Example example;
 
   @override
   Widget build(BuildContext context) {
@@ -23,11 +23,11 @@ class ExampleView extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(word.examples[0].label),
+          Text(example.label),
           const SizedBox(
             height: 8,
           ),
-          Text(word.examples[0].translatedLabel),
+          Text(example.translatedLabel),
         ],
       ),
     );

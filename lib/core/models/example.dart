@@ -14,6 +14,8 @@ class Example {
     );
   }
 
+  get length => null;
+
   static List<Example> listFromJsons(List<dynamic>? jsons) {
     if (jsons == null) return [];
 
