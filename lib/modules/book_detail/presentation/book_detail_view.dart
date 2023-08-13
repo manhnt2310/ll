@@ -6,9 +6,13 @@ import 'package:ll/modules/book_detail/widgets/start_learning_button.dart';
 import 'package:ll/modules/book_detail/widgets/title_view.dart';
 import 'package:ll/modules/book_detail/widgets/top_menu_view.dart';
 import 'package:ll/modules/book_detail/widgets/statistics_view.dart';
+import 'package:ll/modules/word_list/presentation/word_list_view.dart';
 
 class BookDetailView extends StatefulWidget {
-  const BookDetailView({super.key, required this.book});
+  const BookDetailView({
+    super.key,
+    required this.book,
+  });
 
   final Book book;
 
@@ -55,7 +59,11 @@ class _BookDetailViewState extends State<BookDetailView> {
               const SizedBox(
                 height: 5,
               ),
-              const StatisticsView(),
+              const StatisticsView(
+                icon: Icon(Icons.check),
+                title: '',
+                subtitle: '',
+              ),
               const SizedBox(
                 height: 20,
               ),

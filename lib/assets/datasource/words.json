@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "bookId": 1,
+        "chapterId": 1,
+        "sectionId": 1,
+        "label": "doctor",
+        "translatedLabel": "bac si"
+    },
+    {
+        "id": 2,
+        "bookId": 1,
+        "chapterId": 1,
+        "sectionId": 1,
+        "label": "teacher",
+        "translatedLabel": "giao vien"
+    },
+    {
+        "id": 3,
+        "bookId": 1,
+        "chapterId": 1,
+        "sectionId": 1,
+        "label": "engineer",
+        "translatedLabel": "ky su"
+    },
+    {
+        "id": 4,
+        "bookId": 1,
+        "chapterId": 1,
+        "sectionId": 1,
+        "label": "architect",
+        "translatedLabel": "kien truc su"
+    }
+]

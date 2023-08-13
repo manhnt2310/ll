@@ -26,7 +26,7 @@ class ReviewView extends StatelessWidget {
               onPressed: () {
                 debugPrint('Tat ca');
               },
-              child: const Text('Tat ca(5) >'),
+              child: const Text('Tat ca(2) >'),
             )
           ],
         ),

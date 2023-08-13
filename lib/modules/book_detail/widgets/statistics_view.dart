@@ -1,7 +1,18 @@
 import 'package:flutter/material.dart';
 
+import 'package:ll/modules/word_list/presentation/word_list_view.dart';
+
 class StatisticsView extends StatelessWidget {
-  const StatisticsView({super.key});
+  const StatisticsView({
+    super.key,
+    required this.icon,
+    required this.title,
+    required this.subtitle,
+  });
+
+  final Icon icon;
+  final String title;
+  final String subtitle;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +32,7 @@ class StatisticsView extends StatelessWidget {
             color: Colors.grey,
           ),
           title: 'Chua hoc',
-          subtitle: '150 words >',
+          subtitle: '150 words',
         ),
         SizedBox(
           height: 5,
@@ -52,11 +63,11 @@ class StatisticsView extends StatelessWidget {
 
 class ItemView extends StatelessWidget {
   const ItemView({
-    Key? key,
+    super.key,
     required this.icon,
     required this.title,
     required this.subtitle,
-  }) : super(key: key);
+  });
 
   final Icon icon;
   final String title;
@@ -64,31 +75,38 @@ class ItemView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        padding: const EdgeInsets.only(left: 10),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(6),
-          boxShadow: kElevationToShadow[2],
-          color: Colors.white,
-        ),
-        height: 50,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Row(
-              children: [
-                icon,
-                const SizedBox(
-                  width: 6,
-                ),
-                Text(title),
-              ],
-            ),
-            TextButton(
-              onPressed: null,
-              child: Text(subtitle),
-            )
-          ],
-        ));
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const WordListView(bookId: 1),
+          ),
+        );
+      },
+      child: Container(
+          padding: const EdgeInsets.only(left: 10),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(6),
+            boxShadow: kElevationToShadow[2],
+            color: Colors.white,
+          ),
+          height: 50,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Row(
+                children: [
+                  icon,
+                  const SizedBox(
+                    width: 6,
+                  ),
+                  Text(title),
+                ],
+              ),
+              Text(subtitle)
+            ],
+          )),
+    );
   }
 }

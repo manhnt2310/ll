@@ -66,6 +66,7 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
     - lib/assets/datasource/books.json
+    - lib/assets/datasource/words.json
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

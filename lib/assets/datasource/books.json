@@ -224,7 +224,25 @@
                   "title": "Section 1",
                   "description": "IT",
                   "totalWords": 50
-              }
+              },
+              {
+                "id": 2,
+                "title": "Section 2",
+                "description": "IT",
+                "totalWords": 50
+            },
+            {
+                "id": 3,
+                "title": "Section 3",
+                "description": "IT",
+                "totalWords": 50
+            },
+            {
+                "id": 4,
+                "title": "Section 4",
+                "description": "IT",
+                "totalWords": 50
+            }
             ]
           },
           {
