@@ -20,7 +20,7 @@ class StatisticsView extends StatelessWidget {
         ItemView(
           icon: Icon(Icons.format_list_bulleted),
           title: 'Tat ca',
-          subtitle: '200 words >',
+          subtitle: '200 words >   ',
         ),
         SizedBox(
           height: 5,
@@ -31,7 +31,7 @@ class StatisticsView extends StatelessWidget {
             color: Colors.grey,
           ),
           title: 'Chua hoc',
-          subtitle: '150 words',
+          subtitle: '150 words >   ',
         ),
         SizedBox(
           height: 5,
@@ -42,7 +42,7 @@ class StatisticsView extends StatelessWidget {
             color: Colors.red,
           ),
           title: 'Dang hoc',
-          subtitle: '30 words >',
+          subtitle: '30 words >   ',
         ),
         SizedBox(
           height: 5,
@@ -53,7 +53,7 @@ class StatisticsView extends StatelessWidget {
             color: Colors.green,
           ),
           title: 'Can on tap',
-          subtitle: '10 words >',
+          subtitle: '10 words >   ',
         ),
       ],
     );
