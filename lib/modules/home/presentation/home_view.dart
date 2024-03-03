@@ -1,27 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:ll/core/data_providers/book_data_provider.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'package:ll/core/models/book.dart';
 import 'package:ll/modules/book_detail/presentation/book_detail_view.dart';
 import 'package:ll/modules/home/widgets/book_grid_view.dart';
 import '../widgets/statistics_view.dart';
 import '../widgets/recent_learning_view.dart';
 import '../widgets/review_view.dart';
+import '../cubit/home_cubit.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final bookDataProvider = BookDataProvider();
-
-    return FutureBuilder(
-      future: bookDataProvider.getBooks(),
-      builder: (BuildContext context, AsyncSnapshot snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting) {
-          return const CircularProgressIndicator();
-        }
-        if (snapshot.hasData) {
-          final books = snapshot.data as List<Book>;
+    return BlocBuilder<HomeCubit, HomeState>(
+      builder: (context, state) {
+        if (state.books.isEmpty) {
+          return const Center(child: CircularProgressIndicator());
+        } else {
+          final books = state.books;
 
           return Scaffold(
             appBar: AppBar(
@@ -66,7 +64,6 @@ class HomeView extends StatelessWidget {
             ),
           );
         }
-        return Container();
       },
     );
   }
