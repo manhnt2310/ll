@@ -15,8 +15,8 @@ class StatisticsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: const [
+    return const Column(
+      children: [
         ItemView(
           icon: Icon(Icons.format_list_bulleted),
           title: 'Tat ca',

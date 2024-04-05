@@ -89,9 +89,9 @@ class RecentLearningView extends StatelessWidget {
                       child: Container(
                         color: Colors.white,
                         padding: const EdgeInsets.all(8),
-                        child: Row(
+                        child: const Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: const [
+                            children: [
                               Text('Chua hoc'),
                               Text('150 words'),
                             ]),
@@ -112,9 +112,9 @@ class RecentLearningView extends StatelessWidget {
                       child: Container(
                         color: Colors.white,
                         padding: const EdgeInsets.all(8),
-                        child: Row(
+                        child: const Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: const [
+                            children: [
                               Text('Dang hoc'),
                               Text('30 words'),
                             ]),
@@ -135,9 +135,9 @@ class RecentLearningView extends StatelessWidget {
                       child: Container(
                         color: Colors.white,
                         padding: const EdgeInsets.all(8),
-                        child: Row(
+                        child: const Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: const [
+                            children: [
                               Text('Can on tap'),
                               Text('10 words'),
                             ]),

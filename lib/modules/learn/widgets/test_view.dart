@@ -61,9 +61,9 @@ class _TestViewState extends State<TestView> {
                           ),
                           height: 74,
                           width: 74,
-                          child: Column(
+                          child: const Column(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
+                            children: [
                               Text(
                                 'AGAIN',
                                 style: TextStyle(
@@ -94,9 +94,9 @@ class _TestViewState extends State<TestView> {
                           ),
                           height: 74,
                           width: 74,
-                          child: Column(
+                          child: const Column(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
+                            children: [
                               Text(
                                 'HARD',
                                 style: TextStyle(
@@ -127,9 +127,9 @@ class _TestViewState extends State<TestView> {
                           ),
                           height: 74,
                           width: 74,
-                          child: Column(
+                          child: const Column(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
+                            children: [
                               Text(
                                 'GOOD',
                                 style: TextStyle(
@@ -160,9 +160,9 @@ class _TestViewState extends State<TestView> {
                           ),
                           height: 74,
                           width: 74,
-                          child: Column(
+                          child: const Column(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
+                            children: [
                               Text(
                                 'EASY',
                                 style: TextStyle(

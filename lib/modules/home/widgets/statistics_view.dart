@@ -33,9 +33,9 @@ class StatisticsView extends StatelessWidget {
                   child: Container(
                     color: Colors.white,
                     padding: const EdgeInsets.all(8),
-                    child: Column(
+                    child: const Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: const [
+                        children: [
                           Text('So gio hoc'),
                           Text('1 gio 10 phut'),
                         ]),
@@ -48,9 +48,9 @@ class StatisticsView extends StatelessWidget {
                   child: Container(
                     color: Colors.white,
                     padding: const EdgeInsets.all(8),
-                    child: Column(
+                    child: const Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: const [
+                        children: [
                           Text('So luong'),
                           Text('90 tu'),
                         ]),

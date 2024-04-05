@@ -31,8 +31,8 @@ class BookView extends StatelessWidget {
                   ),
                   Column(
                     children: [
-                      Row(
-                        children: const [Text('N1sdfgs3000')],
+                      const Row(
+                        children: [Text('N1sdfgs3000')],
                       ),
                       const SizedBox(
                         height: 10,
@@ -84,8 +84,8 @@ class BookView extends StatelessWidget {
                   ),
                   Column(
                     children: [
-                      Row(
-                        children: const [Text('N2sdfgs2500')],
+                      const Row(
+                        children: [Text('N2sdfgs2500')],
                       ),
                       const SizedBox(
                         height: 10,
