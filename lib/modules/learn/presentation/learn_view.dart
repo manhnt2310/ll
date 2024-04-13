@@ -1,29 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:ll/core/models/word.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:ll/modules/learn/cubit/learn_cubit.dart';
 import 'package:ll/modules/learn/widgets/word_view.dart';
 import 'package:ll/modules/learn/widgets/test_view.dart';
-import '../../../core/data_providers/word_data_provider.dart';
 
-class LearnView extends StatefulWidget {
-  const LearnView({super.key});
+class LearnView extends StatelessWidget {
+  const LearnView({Key? key}) : super(key: key);
 
-  @override
-  State<LearnView> createState() => _LearnViewState();
-}
-
-class _LearnViewState extends State<LearnView> {
   @override
   Widget build(BuildContext context) {
-    final wordDataProvider = WordDataProvider();
-
-    return FutureBuilder(
-      future: wordDataProvider.getWords(1),
-      builder: (BuildContext context, AsyncSnapshot snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting) {
-          return const CircularProgressIndicator();
-        }
-        if (snapshot.hasData) {
-          var words = snapshot.data as List<Word>;
+    return BlocBuilder<LearnCubit, LearnState>(
+      builder: (context, state) {
+        if (state.words.isEmpty) {
+          return const Center(child: CircularProgressIndicator());
+        } else {
+          final words = state.words;
 
           return Scaffold(
             appBar: AppBar(
@@ -53,7 +44,6 @@ class _LearnViewState extends State<LearnView> {
             ),
           );
         }
-        return Container();
       },
     );
   }

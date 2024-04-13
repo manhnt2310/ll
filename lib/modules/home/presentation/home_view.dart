@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import 'package:ll/core/models/book.dart';
 import 'package:ll/modules/book_detail/presentation/book_detail_view.dart';
 import 'package:ll/modules/home/widgets/book_grid_view.dart';

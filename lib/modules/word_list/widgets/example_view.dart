@@ -19,7 +19,7 @@ class ExampleView extends StatelessWidget {
         boxShadow: kElevationToShadow[2],
       ),
       height: 70,
-      width: 350,
+      width: 450,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

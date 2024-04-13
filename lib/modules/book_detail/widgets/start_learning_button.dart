@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ll/modules/learn/presentation/learn_view.dart';
+import 'package:ll/modules/learn/presentation/learn_page.dart';
 
 class StartLearningButton extends StatelessWidget {
   const StartLearningButton({super.key});
@@ -11,7 +11,7 @@ class StartLearningButton extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => const LearnView(),
+            builder: (context) => const LearnPage(),
           ),
         );
       },

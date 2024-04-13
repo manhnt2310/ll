@@ -30,7 +30,7 @@ class RecentLearningView extends StatelessWidget {
                 borderRadius: BorderRadius.circular(6),
                 boxShadow: kElevationToShadow[2]),
             padding: const EdgeInsets.all(10),
-            height: 230,
+            height: 240,
             width: double.infinity,
             child: Column(
               children: [

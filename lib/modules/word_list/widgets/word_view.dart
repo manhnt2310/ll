@@ -36,7 +36,7 @@ class _WordViewState extends State<WordView> {
               borderRadius: BorderRadius.circular(6),
               boxShadow: kElevationToShadow[2],
             ),
-            height: 70,
+            height: 80,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
