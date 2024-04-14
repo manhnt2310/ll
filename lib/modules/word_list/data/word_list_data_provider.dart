@@ -7,7 +7,9 @@ class WordListDataProvider {
     final String response = await rootBundle.loadString(
       'lib/assets/datasource/words.json',
     );
+
     final data = await json.decode(response);
-    return data.map((e) => Word.fromJson(e)).toList();
+    final words = Word.listFromJsons(data);
+    return words;
   }
 }

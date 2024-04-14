@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ll/modules/word_list/presentation/word_list_view.dart';
+import 'package:ll/modules/word_list/presentation/word_list_page.dart';
 
 class StatisticsView extends StatelessWidget {
   const StatisticsView({
@@ -79,7 +79,7 @@ class ItemView extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => const WordListView(bookId: 1),
+            builder: (context) => const WordListPage(),
           ),
         );
       },

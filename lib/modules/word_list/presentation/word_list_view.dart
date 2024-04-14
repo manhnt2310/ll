@@ -1,28 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:ll/modules/word_list/cubit/word_list_cubit.dart';
 import 'package:ll/modules/word_list/widgets/word_view.dart';
-import '../../../core/data_providers/word_data_provider.dart';
-import '../../../core/models/word.dart';
 
 class WordListView extends StatelessWidget {
   const WordListView({
-    super.key,
+    Key? key,
     required this.bookId,
-  });
+  }) : super(key: key);
 
   final int bookId;
 
   @override
   Widget build(BuildContext context) {
-    final wordDataProvider = WordDataProvider();
-
-    return FutureBuilder(
-      future: wordDataProvider.getWords(1),
-      builder: (BuildContext context, AsyncSnapshot snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting) {
-          return const CircularProgressIndicator();
-        }
-        if (snapshot.hasData) {
-          var words = snapshot.data as List<Word>;
+    return BlocBuilder<WordListCubit, WordListState>(
+      builder: (context, state) {
+        if (state.words.isEmpty) {
+          return const Center(child: CircularProgressIndicator());
+        } else {
+          final words = state.words;
 
           return Scaffold(
             appBar: AppBar(
@@ -49,7 +45,6 @@ class WordListView extends StatelessWidget {
             ),
           );
         }
-        return Container();
       },
     );
   }
