@@ -13,4 +13,8 @@ class BookDetailCubit extends Cubit<BookDetailState> {
     final books = await dataProvider.getBooks();
     emit(state.copyWith(books: books));
   }
+
+  void selectChapter(int index) {
+    emit(state.copyWith(selectedChapterIndex: index));
+  }
 }

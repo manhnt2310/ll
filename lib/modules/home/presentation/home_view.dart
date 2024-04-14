@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ll/core/models/book.dart';
-import 'package:ll/modules/book_detail/presentation/book_detail_view.dart';
+import 'package:ll/modules/book_detail/presentation/book_detail_page.dart';
 import 'package:ll/modules/home/widgets/book_grid_view.dart';
 import '../widgets/statistics_view.dart';
 import '../widgets/recent_learning_view.dart';
@@ -39,7 +39,7 @@ class HomeView extends StatelessWidget {
                     RecentLearningView(
                       book: books[0],
                       onSelectBook: (book) =>
-                          _goToBookDetailView(context, book),
+                          _goToBookDetailPage(context, book),
                     ),
                     const SizedBox(
                       height: 20,
@@ -47,7 +47,7 @@ class HomeView extends StatelessWidget {
                     ReviewView(
                       books: books,
                       onSelectBook: (book) =>
-                          _goToBookDetailView(context, book),
+                          _goToBookDetailPage(context, book),
                     ),
                     const SizedBox(
                       height: 20,
@@ -55,7 +55,7 @@ class HomeView extends StatelessWidget {
                     BookGridView(
                       books: books,
                       onSelectBook: (book) =>
-                          _goToBookDetailView(context, book),
+                          _goToBookDetailPage(context, book),
                     )
                   ],
                 ),
@@ -67,11 +67,11 @@ class HomeView extends StatelessWidget {
     );
   }
 
-  _goToBookDetailView(BuildContext context, Book book) {
+  _goToBookDetailPage(BuildContext context, Book book) {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => BookDetailView(
+        builder: (context) => BookDetailPage(
           book: book,
         ),
       ),
