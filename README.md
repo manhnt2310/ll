@@ -14,3 +14,22 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+## Interface
+1. Main interface of the application:
+
+   ![main](images/main.png)
+
+2. Book detail interface of the application:
+
+   ![bookdetail](images/book_detail.png)
+
+3. Words interface of the application:
+
+   ![words](images/words.png)
+
+4. Learn interface of the application:
+
+   ![learn](images/learn.png)
+
+   
