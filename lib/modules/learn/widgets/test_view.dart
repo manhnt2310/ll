@@ -59,8 +59,8 @@ class _TestViewState extends State<TestView> {
                             boxShadow: kElevationToShadow[2],
                             color: Colors.white,
                           ),
-                          height: 74,
-                          width: 74,
+                          height: 70,
+                          width: 70,
                           child: const Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -92,8 +92,8 @@ class _TestViewState extends State<TestView> {
                             boxShadow: kElevationToShadow[2],
                             color: Colors.white,
                           ),
-                          height: 74,
-                          width: 74,
+                          height: 70,
+                          width: 70,
                           child: const Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -125,8 +125,8 @@ class _TestViewState extends State<TestView> {
                             boxShadow: kElevationToShadow[2],
                             color: Colors.white,
                           ),
-                          height: 74,
-                          width: 74,
+                          height: 70,
+                          width: 70,
                           child: const Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -158,8 +158,8 @@ class _TestViewState extends State<TestView> {
                             boxShadow: kElevationToShadow[2],
                             color: Colors.white,
                           ),
-                          height: 74,
-                          width: 74,
+                          height: 70,
+                          width: 70,
                           child: const Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
